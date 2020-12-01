@@ -1,5 +1,13 @@
 package fr.hugosimony.aoc2020.day1;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
+import fr.hugosimony.aoc2020.Main;
+
 public class ProblemsDay1 {
 	
 	/*
@@ -18,10 +26,19 @@ public class ProblemsDay1 {
 		//*********************************************************
 		// Setup
 		
-		String[] numbersString = InputsDay1.problem1_2.split("\n");
-		int[] numbers = new int[numbersString.length];
-		for(int i = 0; i < numbersString.length; i++)
-			numbers[i] = Integer.parseInt(numbersString[i]);
+    	ArrayList<Integer> numbersList = new ArrayList<Integer>();
+	    try {
+	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
+	    	String line = reader.readLine();
+	    	while (line != null) {
+	    		numbersList.add(Integer.parseInt(line));
+	    		line = reader.readLine();
+	    	}
+	  	    reader.close();
+	    } catch(IOException e) {
+	    	System.out.println("Not able to open this file.");
+	    }
+	    int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
 		int multiplication = 0;
 
 		//*********************************************************
@@ -51,10 +68,19 @@ public class ProblemsDay1 {
 		//*********************************************************
 		// Setup
 		
-		String[] numbersString = InputsDay1.problem1_2.split("\n");
-		int[] numbers = new int[numbersString.length];
-		for(int i = 0; i < numbersString.length; i++)
-			numbers[i] = Integer.parseInt(numbersString[i]);
+		ArrayList<Integer> numbersList = new ArrayList<Integer>();
+	    try {
+	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
+	    	String line = reader.readLine();
+	    	while (line != null) {
+	    		numbersList.add(Integer.parseInt(line));
+	    		line = reader.readLine();
+	    	}
+	  	    reader.close();
+	    } catch(IOException e) {
+	    	System.out.println("Not able to open this file.");
+	    }
+	    int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
 		int multiplication = 0;
 
 		//*********************************************************

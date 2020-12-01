@@ -4,6 +4,8 @@ import fr.hugosimony.aoc2020.day1.ProblemsDay1;
 
 public class Main {
 	
+	public static final String filesPath = "src/fr/hugosimony/aoc2020/";
+	
 	public static void main(String[] args) {
 		
 		/*
