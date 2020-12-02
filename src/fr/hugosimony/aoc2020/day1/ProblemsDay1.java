@@ -19,26 +19,26 @@ public class ProblemsDay1 {
 		/*
 		 * Problem :
 		 * You need to find the two entries that sum to 2020 and then multiply those two numbers together.
-		 * Imput : A list of numbers (as a String).
+		 * Imput : A list of numbers.
 		 * Output : The result of the problem.
 		 */
 		
 		//*********************************************************
 		// Setup
 		
-    	ArrayList<Integer> numbersList = new ArrayList<Integer>();
-	    try {
-	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
-	    	String line = reader.readLine();
-	    	while (line != null) {
-	    		numbersList.add(Integer.parseInt(line));
-	    		line = reader.readLine();
-	    	}
-	  	    reader.close();
-	    } catch(IOException e) {
-	    	System.out.println("Not able to open this file.");
-	    }
-	    int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
+		ArrayList<Integer> numbersList = new ArrayList<Integer>();
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
+			String line = reader.readLine();
+			while (line != null) {
+				numbersList.add(Integer.parseInt(line));
+				line = reader.readLine();
+			}
+		    reader.close();
+		} catch(IOException e) {
+			System.out.println("Not able to open this file.");
+		}
+		int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
 		int multiplication = 0;
 
 		//*********************************************************
@@ -69,18 +69,18 @@ public class ProblemsDay1 {
 		// Setup
 		
 		ArrayList<Integer> numbersList = new ArrayList<Integer>();
-	    try {
-	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
-	    	String line = reader.readLine();
-	    	while (line != null) {
-	    		numbersList.add(Integer.parseInt(line));
-	    		line = reader.readLine();
-	    	}
-	  	    reader.close();
-	    } catch(IOException e) {
-	    	System.out.println("Not able to open this file.");
-	    }
-	    int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day1/input.txt").toString()));
+			String line = reader.readLine();
+			while (line != null) {
+				numbersList.add(Integer.parseInt(line));
+				line = reader.readLine();
+			}
+		    reader.close();
+		} catch(IOException e) {
+			System.out.println("Not able to open this file.");
+		}
+		int[] numbers = numbersList.stream().mapToInt(i -> i).toArray();
 		int multiplication = 0;
 
 		//*********************************************************
