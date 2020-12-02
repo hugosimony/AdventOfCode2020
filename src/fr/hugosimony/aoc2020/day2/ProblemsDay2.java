@@ -29,19 +29,19 @@ public class ProblemsDay2 {
 		// Setup
 		
 		ArrayList<String> lines = new ArrayList<String>();
-	    try {
-	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day2/input.txt").toString()));
-	    	String line = reader.readLine();
-	    	while (line != null) {
-	    		lines.add(line);
-	    		line = reader.readLine();
+	    	try {
+	    		BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day2/input.txt").toString()));
+	    		String line = reader.readLine();
+	    		while (line != null) {
+	    			lines.add(line);
+	    			line = reader.readLine();
+	    		}
+	  	    	reader.close();
+	    	} catch(IOException e) {
+	    		System.out.println("Not able to open this file.");
 	    	}
-	  	    reader.close();
-	    } catch(IOException e) {
-	    	System.out.println("Not able to open this file.");
-	    }
-	    String[] parts; String[] first; String[] numbers;
-	    int min; int max; int count;
+	    	String[] parts; String[] first; String[] numbers;
+	    	int min; int max; int count;
 		int result = 0;
 		
 		//*********************************************************
@@ -82,19 +82,19 @@ public class ProblemsDay2 {
 		// Setup
 		
 		ArrayList<String> lines = new ArrayList<String>();
-	    try {
-	    	BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day2/input.txt").toString()));
-	    	String line = reader.readLine();
-	    	while (line != null) {
-	    		lines.add(line);
-	    		line = reader.readLine();
+	    	try {
+	    		BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day2/input.txt").toString()));
+	    		String line = reader.readLine();
+	    		while (line != null) {
+	    			lines.add(line);
+	    			line = reader.readLine();
+	    		}
+	  	    	reader.close();
+	    	} catch(IOException e) {
+	    		System.out.println("Not able to open this file.");
 	    	}
-	  	    reader.close();
-	    } catch(IOException e) {
-	    	System.out.println("Not able to open this file.");
-	    }
-	    String[] parts; String[] first; String[] numbers;
-	    int index1; int index2; int count;
+	    	String[] parts; String[] first; String[] numbers;
+	    	int index1; int index2; int count;
 		int result = 0;
 		
 		//*********************************************************
