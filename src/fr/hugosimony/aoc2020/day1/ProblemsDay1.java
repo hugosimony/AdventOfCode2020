@@ -34,7 +34,7 @@ public class ProblemsDay1 {
 				numbersList.add(Integer.parseInt(line));
 				line = reader.readLine();
 			}
-		    	reader.close();
+			reader.close();
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
@@ -76,7 +76,7 @@ public class ProblemsDay1 {
 				numbersList.add(Integer.parseInt(line));
 				line = reader.readLine();
 			}
-		    	reader.close();
+			reader.close();
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
