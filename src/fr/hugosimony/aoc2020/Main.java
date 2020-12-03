@@ -2,6 +2,7 @@ package fr.hugosimony.aoc2020;
 
 import fr.hugosimony.aoc2020.day1.ProblemsDay1;
 import fr.hugosimony.aoc2020.day2.ProblemsDay2;
+import fr.hugosimony.aoc2020.day3.ProblemsDay3;
 
 public class Main {
 	
@@ -19,6 +20,9 @@ public class Main {
 		System.out.println("------------------ Day 2 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay2.Problem1());
 		System.out.println("Problem 1 : Solution = " + ProblemsDay2.Problem2());
+		System.out.println("------------------ Day 3 ------------------");
+		System.out.println("Problem 1 : Solution = " + ProblemsDay3.Problem1());
+		System.out.println("Problem 1 : Solution = " + ProblemsDay3.Problem2());
 		
 	}
 	
