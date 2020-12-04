@@ -38,7 +38,7 @@ public class ProblemsDay3 {
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
-	    int i = 0; int j = 0;
+	    	int i = 0; int j = 0;
 		int result = 0;
 		
 		//*********************************************************
@@ -88,9 +88,9 @@ public class ProblemsDay3 {
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
-	    int i = 0; int []js = {0,0,0,0,0};
-	    int []counts = {0,0,0,0,0};
-	    int result = 1;
+	    	int i = 0; int []js = {0,0,0,0,0};
+	    	int []counts = {0,0,0,0,0};
+	    	int result = 1;
 		
 		//*********************************************************
 		// Solve
