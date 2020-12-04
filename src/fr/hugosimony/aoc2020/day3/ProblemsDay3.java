@@ -11,7 +11,7 @@ import fr.hugosimony.aoc2020.Main;
 public class ProblemsDay3 {
 	
 	/*
-	 * Solutions of second day's problems of Advent of Code 2020 !
+	 * Solutions of third day's problems of Advent of Code 2020 !
 	 */
 	
 	public static int Problem1() {
