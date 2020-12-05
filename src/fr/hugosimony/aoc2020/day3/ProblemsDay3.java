@@ -114,4 +114,5 @@ public class ProblemsDay3 {
 		// Return solution
 		return result;
 	}
+	
 }
