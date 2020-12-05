@@ -49,7 +49,7 @@ public class ProblemsDay4 {
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
-	    String[] fields; boolean cid;
+	   	String[] fields; boolean cid;
 		int result = 0;
 		
 		//*********************************************************
@@ -178,8 +178,8 @@ public class ProblemsDay4 {
 			System.out.println("Not able to open this file.");
 		}
 		List<String> eyeColors = Arrays.asList("amb", "blu", "brn", "gry", "grn", "hzl", "oth");
-	    String[] fields; String[] fieldParts;
-	    boolean[] validity = {false, false, false, false, false, false, false};
+	    	String[] fields; String[] fieldParts;
+		boolean[] validity = {false, false, false, false, false, false, false};
 		int result = 0;
 		
 		//*********************************************************
