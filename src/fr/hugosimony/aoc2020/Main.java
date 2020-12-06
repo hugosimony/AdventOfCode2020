@@ -34,7 +34,7 @@ public class Main {
 		System.out.println("Problem 2 : Solution = " + ProblemsDay5.Problem2());
 		System.out.println("------------------ Day 6 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay6.Problem1());
-		//System.out.println("Problem 2 : Solution = " + ProblemsDay6.Problem2());
+		System.out.println("Problem 2 : Solution = " + ProblemsDay6.Problem2());
 		
 	}
 	
