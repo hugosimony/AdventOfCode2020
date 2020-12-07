@@ -119,6 +119,5 @@ public class ProblemsDay2 {
 		//*********************************************************
 		// Return solution
 		return result;
-	}
-	
+	}	
 }
