@@ -99,5 +99,4 @@ public class ProblemsDay1 {
 		// Return solution
 		return multiplication;
 	}
-	
 }
