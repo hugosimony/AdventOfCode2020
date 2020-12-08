@@ -7,6 +7,7 @@ import fr.hugosimony.aoc2020.day4.ProblemsDay4;
 import fr.hugosimony.aoc2020.day5.ProblemsDay5;
 import fr.hugosimony.aoc2020.day6.ProblemsDay6;
 import fr.hugosimony.aoc2020.day7.ProblemsDay7;
+import fr.hugosimony.aoc2020.day8.ProblemsDay8;
 
 public class Main {
 	
@@ -39,6 +40,9 @@ public class Main {
 		System.out.println("------------------ Day 7 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay7.Problem1());
 		System.out.println("Problem 2 : Solution = " + ProblemsDay7.Problem2());
+		System.out.println("------------------ Day 8 ------------------");
+		System.out.println("Problem 1 : Solution = " + ProblemsDay8.Problem1());
+		System.out.println("Problem 2 : Solution = " + ProblemsDay8.Problem2());
 		
 	}
 	
