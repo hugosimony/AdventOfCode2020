@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import fr.hugosimony.aoc2020.Main;
 
@@ -59,19 +60,6 @@ public class ProblemsDay10 {
 		return ones * (threes+1); // +1 because of the difference between max adaptater and device
 	}
 	
-	// Recursive function for problem 2.
-	
-	public static long getNumberOfPossibilities(int start, int max, ArrayList<Integer> ints) {
-		long possibilities = 0;
-		while(start != max) {
-			if(ints.contains(start + 1))
-				possibilities += getNumberOfPossibilities(ints.indexOf(start + 1), max, ints);
-			if(ints.contains(start + 3))
-				possibilities += getNumberOfPossibilities(ints.indexOf(start + 3), max, ints);
-		}
-		return possibilities;
-	}
-	
 	public static long Problem2() {
 		
 		/*
@@ -97,11 +85,30 @@ public class ProblemsDay10 {
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
-		int max = ints.get(0);
-		for(int i = 1; i < ints.size(); i++) max = max < ints.get(i) ? ints.get(i) : max;
+		Collections.sort(ints);
+		int max = ints.get(ints.size()-1) + 3;
+		long[] list = new long[max+1]; list[0] = 1;
+		boolean[] adapt = new boolean[max+1];
+		for(int i = 0; i < max + 1; i++) adapt[i] = false;
+		for(int i = 0; i < ints.size(); i++) adapt[ints.get(i)] = true;
+		adapt[0] = true; adapt[max] = true;
+		
+		//*********************************************************
+		// Solve
+		
+		for(int i = 1; i <= max; i++) {
+			list[i] = 0;
+			if(adapt[i]) {
+				list[i]  = list[i-1];
+				if(i - 2 >= 0)
+					list[i] += list[i-2];
+				if(i - 3 >= 0)
+					list[i] += list[i-3];
+			}
+		}
 		
 		//*********************************************************
 		// Return solution
-		return getNumberOfPossibilities(0, max, ints); // +1 because of the difference between max adaptater and device
+		return list[max];
 	}
 }
