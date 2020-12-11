@@ -194,7 +194,7 @@ public class ProblemsDay4 {
 					fieldParts = fields[j].split(":");
 					if(fieldParts[0].equals("byr"))
 						validity[0] = isValidByr(fieldParts[1]);
-					else if(fieldParts[0].equals("iyr"))
+					else if(fieldParts[0].equals("iyr")) 
 						validity[1] = isValidIyr(fieldParts[1]);
 					else if(fieldParts[0].equals("eyr"))
 						validity[2] = isValidEyr(fieldParts[1]);
