@@ -18,7 +18,7 @@ public class ProblemsDay11 {
 		
 		/*
 		 * Problem :
-		 * Find the number of occupied seats when everyone arrived.
+		 * Find the number of occupied seats when everyone has arrived.
 		 * More informations on https://adventofcode.com/2020/day/11
 		 * Imput : The list of the adaptaters.
 		 * Output : The result of the problem.
@@ -208,7 +208,7 @@ public class ProblemsDay11 {
 		
 		/*
 		 * Problem :
-		 * Find the number of occupied seats when everyone arrived.
+		 * Find the number of occupied seats when everyone has arrived.
 		 * More informations on https://adventofcode.com/2020/day/11#part2
 		 * Imput : The list of the adaptaters.
 		 * Output : The result of the problem.
