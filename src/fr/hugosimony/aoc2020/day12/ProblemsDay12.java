@@ -34,7 +34,7 @@ public class ProblemsDay12 {
 		
 		/*
 		 * Problem :
-		 * Find the the Manhattan distance between that location and the ship's starting position.
+		 * Find the Manhattan distance between that location and the ship's starting position.
 		 * More informations on https://adventofcode.com/2020/day/12
 		 * Imput : The list of the instructions.
 		 * Output : The result of the problem.
@@ -92,7 +92,7 @@ public class ProblemsDay12 {
 		
 		/*
 		 * Problem :
-		 * Find the the Manhattan distance between that location and the ship's starting position.
+		 * Find the Manhattan distance between that location and the ship's starting position.
 		 * More informations on https://adventofcode.com/2020/day/12#part2
 		 * Imput : The list of the instructions.
 		 * Output : The result of the problem.
