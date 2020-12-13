@@ -60,7 +60,7 @@ public class Main {
 		System.out.println("Problem 2 : Solution = " + "2032"/*ProblemsDay11.Problem2()*/);
 		System.out.println("------------------ Day 12 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay12.Problem1());
-		//System.out.println("Problem 2 : Solution = " + ProblemsDay12.Problem2());
+		System.out.println("Problem 2 : Solution = " + ProblemsDay12.Problem2());
 	}
 	
 }

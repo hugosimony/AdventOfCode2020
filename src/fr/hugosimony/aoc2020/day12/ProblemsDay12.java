@@ -14,7 +14,7 @@ public class ProblemsDay12 {
 	 * Solutions of twelfth day's problems of Advent of Code 2020 !
 	 */
 	
-	// Function for problem 1 and 2
+	// Function for problem 1
 	
 	public static int getDirection(int current, int degrees, int rotation) {
 		
@@ -113,7 +113,7 @@ public class ProblemsDay12 {
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
-		int EW = 0; int NS = 0; int direction = 0;
+		int EWW = 10; int NSW = 1; int EW = 0; int NS = 0; int temp;
 		
 		//*********************************************************
 		// Solve
@@ -121,23 +121,35 @@ public class ProblemsDay12 {
 		for(int i = 0; i < lines.size(); i++) {
 			String instruction = lines.get(i).charAt(0) + "";
 			int value = Integer.parseInt(lines.get(i).replace(instruction, ""));
-			if(instruction.equals("R"))
-				direction = getDirection(direction, value, 0);
-			else if(instruction.equals("L"))
-				direction = getDirection(direction, value, 1);
+			if(instruction.equals("R") || instruction.equals("L")) {
+				if(instruction.equals("L"))
+					value = 360 - value;
+				if(value == 180) {
+					EWW*=-1;
+					NSW*=-1;
+				}
+				else if(value == 90){
+					temp = EWW;
+					EWW = NSW;
+					NSW = temp*-1;
+				}
+				else if(value == 270){
+					temp = EWW;
+					EWW = NSW*-1;
+					NSW = temp;
+				}
+			}
 			else if(instruction.equals("N"))
-				NS += value;
+				NSW += value;
 			else if(instruction.equals("S"))
-				NS -= value;
+				NSW -= value;
 			else if(instruction.equals("E"))
-				EW += value;
+				EWW += value;
 			else if(instruction.equals("W"))
-				EW -= value;
+				EWW -= value;
 			else if(instruction.equals("F")) {
-				if(direction == 0) EW += value;
-				else if(direction == 1) NS -= value;
-				else if(direction == 2) EW -= value;
-				else if(direction == 3) NS += value;
+				EW += EWW*value;
+				NS += NSW*value;
 			}
 		}
 		
