@@ -64,7 +64,11 @@ public class Main {
 		System.out.println("Problem 2 : Solution = " + ProblemsDay12.Problem2());
 		System.out.println("------------------ Day 13 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay13.Problem1());
-		System.out.println("Problem 2 : Solution = " + ProblemsDay13.Problem2());
+		// Solution of day 13 part 2 is very long.
+		System.out.println("Problem 2 : Solution = " + "725169163285238"/*ProblemsDay13.Problem2()*/);
+		System.out.println("------------------ Day 14 ------------------");
+		System.out.println("Problem 1 : Solution = " + ProblemsDay14.Problem1());
+		//System.out.println("Problem 2 : Solution = " + ProblemsDay14.Problem2());
 	}
 	
 }

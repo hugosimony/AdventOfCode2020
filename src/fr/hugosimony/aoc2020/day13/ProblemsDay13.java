@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import fr.hugosimony.aoc2020.Main;
 
@@ -73,29 +74,42 @@ public class ProblemsDay13 {
 		//*********************************************************
 		// Setup
 		
+		ArrayList<Integer> allBuses = new ArrayList<Integer>();
 		ArrayList<Integer> buses = new ArrayList<Integer>();
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day13/input.txt").toString()));
 			reader.readLine();
 			for(String s : reader.readLine().split(",")) {
-				if(!s.equals("x"))
+				if(!s.equals("x")) {
+					allBuses.add(Integer.parseInt(s));
 					buses.add(Integer.parseInt(s));
+				}
+				else
+					allBuses.add(0);
 			}
 			reader.close();
 		} catch(IOException e) {
 			System.out.println("Not able to open this file.");
 		}
+		boolean done = false; int offset = buses.get(0); 
+		long i = 0;
 		
 		//*********************************************************
 		// Solve
 		
-		for(int i = 0; i < buses.size(); i++) {
-			
+		for(; !done; i+=offset) {
+			done = true;
+			int j = 0;
+			while(done && j < buses.size()) {
+				if(i!=j)
+					done = (long) (i + (long) allBuses.indexOf(buses.get(j))) % (long) buses.get(j) == 0;
+				j++;
+			}
 		}
 		
 		//*********************************************************
 		// Return solution
-		return 0;
+		return i-offset;
 	}
 	
 }
