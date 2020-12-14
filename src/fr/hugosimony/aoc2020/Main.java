@@ -5,6 +5,7 @@ import fr.hugosimony.aoc2020.day10.ProblemsDay10;
 import fr.hugosimony.aoc2020.day11.ProblemsDay11;
 import fr.hugosimony.aoc2020.day12.ProblemsDay12;
 import fr.hugosimony.aoc2020.day13.ProblemsDay13;
+import fr.hugosimony.aoc2020.day14.ProblemsDay14;
 import fr.hugosimony.aoc2020.day2.ProblemsDay2;
 import fr.hugosimony.aoc2020.day3.ProblemsDay3;
 import fr.hugosimony.aoc2020.day4.ProblemsDay4;
