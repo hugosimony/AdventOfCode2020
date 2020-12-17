@@ -117,14 +117,13 @@ public class ProblemsDay14 {
 		 * mask and value must have the same length.
 		 */
 		
-		System.out.println("------------------------");
 		ArrayList<String> result = new ArrayList<String>();
 		int countX = 0;
 		for(int i = 0; i < mask.length(); i++)
 			countX += mask.charAt(i) == 'X' ? 1 : 0;
-		for(int i = 0; i < Math.pow(2, countX); i++)
+		countX = (int) Math.pow(2, countX);
+		for(int i = 0; i < countX; i++)
 			result.add("");
-		System.out.println("mask : " + mask);
 		for(int i = 0; i < mask.length(); i++) {
 			if(mask.charAt(i) == '1') {
 				for(int j = 0; j < result.size(); j++)
@@ -132,18 +131,20 @@ public class ProblemsDay14 {
 			}
 			else if(mask.charAt(i) == '0') {
 				for(int j = 0; j < result.size(); j++)
-					result.set(j, result.get(j) + "0");
+					result.set(j, result.get(j) + (value.charAt(i) == '1' ? "1" : "0"));
 			}
 			else {
-				for(int j = 0; j < result.size(); j++)
-					result.set(j, result.get(j) + (j%2==0 ? "0" : "1"));
+				for(int j = 0; j < result.size(); j+=countX) {
+					for(int k = 0; k < countX/2; k++) {
+						result.set(j+k, result.get(j+k) + "0");
+					}
+					for(int k = countX/2; k < countX; k++) {
+						result.set(j+k, result.get(j+k) + "1");
+					}
+				}
+				countX/=2;
 			}
-			
 		}
-		
-		for(String s : result)
-			System.out.println(s);
-		
 		return result;
 	}
 	
@@ -161,10 +162,10 @@ public class ProblemsDay14 {
 		// Setup and solve
 		
 		String parts[]; String mask = "";
-		int key; long value; String temp;
+		int key; String temp;
 		HashMap<Long, Integer> map = new HashMap<Long, Integer>();
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day14/input2.txt").toString()));
+			BufferedReader reader = new BufferedReader(new FileReader(Paths.get(Main.filesPath + "day14/input.txt").toString()));
 			String line = reader.readLine();
 			while (line != null) {
 				parts = line.split(" = ");
@@ -176,7 +177,6 @@ public class ProblemsDay14 {
 					temp = Long.toBinaryString(key);
 					for(int i = temp.length(); i < 36; i++)
 						temp = "0" + temp;
-					System.out.println("memory : " +temp);
 					ArrayList<String> merged = allMergedBinaryStrings(mask, temp);
 					for(int i = 0; i < merged.size(); i++)
 						map.put(getBinValueFromString(merged.get(i)), Integer.parseInt(parts[1]));
@@ -190,10 +190,8 @@ public class ProblemsDay14 {
 		}
 		
 		long sum = 0;
-		for(Entry<Long, Integer> m : map.entrySet()) {
-			System.out.println(m.getKey() + " -> " + m.getValue());
+		for(Entry<Long, Integer> m : map.entrySet())
 			sum+=m.getValue();
-		}
 		
 		//*********************************************************
 		// Return solution
