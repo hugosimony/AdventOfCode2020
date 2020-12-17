@@ -25,6 +25,7 @@ public class Main {
 		
 		/*
 		 * Prints the solutions of all problems by day.
+		 * Note that you can always check the commented function calls to check if they work ;)
 		 */
 		
 		System.out.println("------------------ Day 1 ------------------");
@@ -70,10 +71,12 @@ public class Main {
 		System.out.println("Problem 2 : Solution = " + "725169163285238"/*ProblemsDay13.Problem2()*/);
 		System.out.println("------------------ Day 14 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay14.Problem1());
-		System.out.println("Problem 2 : Solution = " + ProblemsDay14.Problem2());
+		// Solution of day 14 part 2 is a little bit long.
+		System.out.println("Problem 2 : Solution = " + "3278997609887"/*ProblemsDay14.Problem2()*/);
 		System.out.println("------------------ Day 15 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay15.Problem1());
-		//System.out.println("Problem 2 : Solution = " + ProblemsDay15.Problem2());
+		// Solution of day 15 part 2 is a bit long.
+		System.out.println("Problem 2 : Solution = " + "24065124"/*ProblemsDay15.Problem2()*/);
 	}
 	
 }
