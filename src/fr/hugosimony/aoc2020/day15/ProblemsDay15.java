@@ -65,6 +65,7 @@ public class ProblemsDay15 {
 		
 		//*********************************************************
 		// Solve
+		
 		while(index <= 2020){
 			indexOf = getPenultimateIndexOf(list, list.get(list.size()-1));
 			if(indexOf != -1 && indexOf != list.size()-1)
@@ -108,6 +109,7 @@ public class ProblemsDay15 {
 		
 		//*********************************************************
 		// Solve
+		
 		while(index < 30000000){
 			//System.out.println(currentNumber);
 			if(map.containsKey(currentNumber))
