@@ -153,7 +153,7 @@ public class ProblemsDay14 {
 		/*
 		 * Problem :
 		 * Find the sum of all values left in memory after the initialization program completes.
-		 * More informations on https://adventofcode.com/2020/day/14
+		 * More informations on https://adventofcode.com/2020/day/14#part2
 		 * Imput : The initialization program.
 		 * Output : The result of the problem.
 		 */
