@@ -111,7 +111,6 @@ public class ProblemsDay15 {
 		// Solve
 		
 		while(index < 30000000){
-			//System.out.println(currentNumber);
 			if(map.containsKey(currentNumber))
 				tempNumber = index - map.get(currentNumber);
 			else
