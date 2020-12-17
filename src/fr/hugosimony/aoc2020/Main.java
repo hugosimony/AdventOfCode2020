@@ -80,7 +80,7 @@ public class Main {
 		System.out.println("Problem 2 : Solution = " + "24065124"/*ProblemsDay15.Problem2()*/);
 		System.out.println("------------------ Day 16 ------------------");
 		System.out.println("Problem 1 : Solution = " + ProblemsDay16.Problem1());
-		//System.out.println("Problem 2 : Solution = " + ProblemsDay16.Problem2());
+		System.out.println("Problem 2 : Solution = " + ProblemsDay16.Problem2());
 	}
 	
 }
